@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Assistance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Set background color to white */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: none; /* Hide navigation links */
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 600px; /* Set maximum width for content */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            margin-top: 20px;
+            width: 100%;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-left: auto; /* Align image to the right */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>College Admission Assistance</h1>
+    </header>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to College Admission Assistance! We specialize in helping students navigate the college admission process stress-free.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Identifying client's needs</li>
+            <li>Consultation with advisors</li>
+            <li>Recording academic history</li>
+            <li>Researching colleges</li>
+            <li>Compiling information</li>
+            <li>Making recommendations</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="major">Desired Major:</label><br>
+            <input type="text" id="major" name="major" required><br>
+            <label for="location">Preferred Location:</label><br>
+            <input type="text" id="location" name="location" required><br>
+            <label for="budget">Budget:</label><br>
+            <input type="text" id="budget" name="budget" required><br>
+            <label for="dream">Dream College:</label><br>
+            <input type="text" id="dream" name="dream" required><br>
+            <label for="interests">Interests:</label><br>
+            <input type="text" id="interests" name="interests" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section id="performance" style="display: none;">
+        <h2>High School Performance</h2>
+        <form id="performance-form">
+            <label for="gpa">High School GPA:</label><br>
+            <input type="text" id="gpa" name="gpa" required><br>
+            <label for="test_scores">Standardized Test Scores:</label><br>
+            <input type="text" id="test_scores" name="test_scores" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <img src="https://www.google.com/search?q=collage+of+colleges&tbm=isch&ved=2ahUKEwj2r6DfwqeEAxXCOTQIHZIAAucQ2-cCegQIABAA&oq=collage+of+colleges&gs_lp=EgNpbWciE2NvbGxhZ2Ugb2YgY29sbGVnZXMyBRAAGIAEMgUQABiABEjTLFCtCViOLHACeACQAQKYAfgBoAGvEaoBBjEzLjguMrgBA8gBAPgBAYoCC2d3cy13aXotaW1nwgIKEAAYgAQYigUYQ8ICCBAAGIAEGLEDwgINEAAYgAQYigUYQxixA8ICEBAAGIAEGIoFGEMYsQMYgwHCAgYQABgFGB7CAgYQABgIGB7CAgkQABiABBgYGArCAgcQABiABBgYiAYB&sclient=img&ei=uPXKZfbzJMLz0PEPkoGIuA4&bih=859&biw=1745#imgrc=wFwd39BQPy0z_M" alt="Happy Student">
+    </section>
 
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("contact").style.display = "none";
+            document.getElementById("performance").style.display = "block";
+        });
+    </script>
+</body>
+</html>
